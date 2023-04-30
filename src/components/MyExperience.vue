@@ -10,7 +10,9 @@
             <div class="bg-white rounded" v-for="(xp, i) in experience" :key="i">
                 <div class="h-56 bg-gray-400 rounded"></div>
                 <div class="py-2 px-3 border-b border-slate-300">
-                    <p class="">{{ xp.employer }}</p>
+                    <p class="">{{ xp.employer }} <span v-if="xp.working"
+                            class="uppercase bg-gray-300 text-gray-700 px-4 py-1 rounded-full font-bold text-xs mx-2">in
+                            progress</span></p>
                     <p class="font-semibold py-1 text-2xl">{{ xp.role }}</p>
                     <p class="text-justify line-clamp-5"> {{ xp.description }}</p>
                     <p class="text-right italic text-black/70 font-light pt-2 pb-1">{{ xp.duration[0] }} - {{ xp.duration[1]
@@ -18,13 +20,14 @@
                     </p>
                 </div>
                 <div class="flex justify-between px-3 py-2 bg-gray-200 rounded-b">
-                    <p>More...</p>
+                    <p>More...
+                        <span class="text-xs text-gray-500 italic mt-1">(Future scope)</span>
+                    </p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                     </svg>
-
                 </div>
             </div>
         </div>
