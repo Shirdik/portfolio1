@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     async fetchBooks() {
-      return await fetch("http://localhost:8090/api").then(res => res.json()).then(res => this.data = res.document);
+      return await fetch("https://desolate-dawn-89646.herokuapp.com/api").then(res => res.json()).then(res => this.data = res.document);
     },
   },
   async created() {
