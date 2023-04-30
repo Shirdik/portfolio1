@@ -45,8 +45,7 @@ export default {
     },
   },
   async created() {
-    this.fetchBooks();
-  }
+    this.fetchBooks(); }
 }
 </script>
 
