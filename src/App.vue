@@ -22,6 +22,7 @@ import MyProjects from './components/MyProjects.vue';
 import MyEducation from './components/MyEducation.vue';
 import MyFooter from './components/MyFooter.vue';
 import './output.css'
+import data from './assets/db.json'
 
 export default {
   name: 'App',
@@ -36,16 +37,9 @@ export default {
   },
   data() {
     return {
-      data: {}
+      data: data
     }
   },
-  methods: {
-    async fetchBooks() {
-      return await fetch("https://desolate-dawn-89646.herokuapp.com/api").then(res => res.json()).then(res => this.data = res.document);
-    },
-  },
-  async created() {
-    this.fetchBooks(); }
 }
 </script>
 
